@@ -12,6 +12,7 @@ window.SpeechRecognition =
   function onSpeak(e) {
     chute = e.results[0][0].transcript
     exibeChuteNaTela(chute)
+    verificaSeOChutePossuUmValorValido(chute)
   }
 
   function exibeChuteNaTela(chute) {
