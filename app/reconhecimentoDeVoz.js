@@ -1,6 +1,6 @@
 const elementoChute = document.getElementById('chute')
 
-window.SpeechRecognition =
+  window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
   const recognition = new SpeechRecognition();
@@ -19,5 +19,7 @@ window.SpeechRecognition =
     elementoChute.innerHTML = `
     <div>Você disse:</div>
     <span class="box">${chute}</span>
-    <div>O número secreto é maior <i class="fa-solid fa-arrow-up-long"></i></div>`
+    `
   }
+
+  recognition.addEventListener('end', () => recognition.start())
